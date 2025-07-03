@@ -14,21 +14,20 @@ from django.contrib.auth.models import User
 from rest_framework.views import APIView
 class IsOwnerPermission(permissions.BasePermission):
     def has_object_permission(self, request, view, obj):
-        if request.method in permissions.SAFE_METHODS:
-            return True
         return obj.id==request.user.id
 
 class RegistrationView(ModelViewSet):
     serializer_class=RegistrationSerializer
     queryset=User.objects.all()
-    # permission_classes=[permissions.IsAuthenticated]
+    
+   
 
     def get_permissions(self):
         user=self.request.user
         method=self.request.method
 
         if not user.is_authenticated:
-            if method in ["GET","POST"]:
+            if method in ["POST"]:
                 return [permissions.AllowAny()]
             return [permissions.IsAuthenticated()]
         
