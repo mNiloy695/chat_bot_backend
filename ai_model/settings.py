@@ -27,10 +27,12 @@ environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
 SECRET_KEY = env('SECRET_KEY')
 OPENAI_API_KEY=env("OPENAI_API_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
+
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.vercel.app']
-
+CORS_ORIGIN_ALLOW_ALL = True
+CSRF_TRUSTED_ORIGINS = ['https://chat-bot-backend-e8xi-me65edf2g-salah-uddins-projects-1dfd02c2.vercel.app']
 SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(days=1),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
@@ -101,11 +103,7 @@ MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
 ]
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173", 
-    'https://*.vercel.app',
-]
-CORS_ALLOW_ALL_ORIGINS = True
+
 ROOT_URLCONF = 'ai_model.urls'
 
 TEMPLATES = [
