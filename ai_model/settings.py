@@ -123,7 +123,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'ai_model.wsgi.application'
+WSGI_APPLICATION = 'ai_model.wsgi.app'
 
 
 # Database
