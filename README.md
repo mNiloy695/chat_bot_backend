@@ -1,14 +1,18 @@
 
 
 The home page api is :
- https://chat-bot-backend-beige.vercel.app/
+ https://chat-bot-backend-beige.vercel.app/  
 
 for registration:
-https://chat-bot-backend-beige.vercel.app/account/register/
+https://chat-bot-backend-beige.vercel.app/account/register/  (only for accessable unauthenticated user )
 
 for login :
-https://chat-bot-backend-beige.vercel.app/account/login/
+https://chat-bot-backend-beige.vercel.app/account/login/ (only unauthenticated user login )
 
+
+for logout :
+  https://chat-bot-backend-beige.vercel.app/account/logout/  (only authenticated user can logout)
+  
 for chat with the bot :
  https://chat-bot-backend-beige.vercel.app/chat/  ( only authenticated user can chat and he also get his history by it)
 
