@@ -18,15 +18,15 @@ ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.vercel.app']
 # ✅ CORS settings (corrected)
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",  # Local frontend (Vite)
-    "https://chat-bot-frontend.vercel.app",  # Replace with your actual Vercel frontend domain
-    "https://chat-bot-backend-e8xi-me65edf2g-salah-uddins-projects-1dfd02c2.vercel.app",  # Your backend on Vercel
+    "https://chat-bot-frontend-gules.vercel.app/", 
+    "https://chat-bot-backend-beige.vercel.app/",  # Your backend on Vercel
 ]
 CORS_ALLOW_CREDENTIALS = True
 
 # ✅ CSRF protection for production frontend/backend
 CSRF_TRUSTED_ORIGINS = [
-    "https://chat-bot-frontend.vercel.app",
-    "https://chat-bot-backend-e8xi-me65edf2g-salah-uddins-projects-1dfd02c2.vercel.app"
+    "https://chat-bot-frontend-gules.vercel.app/",
+    "https://chat-bot-backend-beige.vercel.app/"
 ]
 
 # JWT configuration
