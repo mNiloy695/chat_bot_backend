@@ -132,7 +132,7 @@ WSGI_APPLICATION = 'ai_model.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',  # still correct
+        'NAME': 'postgres',  
         'USER': 'postgres.tooykglkinmcqwvtdpct',  
         'PASSWORD': env("DATA_BASE_PASSWORD"),  
         'HOST': 'aws-0-ap-southeast-1.pooler.supabase.com',
